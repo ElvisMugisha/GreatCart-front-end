@@ -459,7 +459,7 @@ hr.category {
   padding: 0;
   line-height: 1;
   vertical-align: top;
-  background: #fff;
+  background: #000;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -590,13 +590,13 @@ hr.category {
   justify-content: center; */
   padding: 0 15px 20px 15px;
 }
-.product-box price {
+.product-box .price {
   margin: 15px 0 0;
   font-weight: 800;
   color: #9c7945;
 }
 .product-box h1 {
-  font-size: 18px;
+  font-size: 16px;
   /* border-bottom: 1px solid #ccc; */
   padding-bottom: 5px;
   font-weight: 600;
@@ -794,8 +794,8 @@ table.table.table-bordered th {
 }
 a.primary-btn {
   background: #9c7945;
-  padding: 7px 30px;
-  /* text-align: center; */
+  padding: 7px 15px;
+  text-align: center;
   display: inline-block;
   color: #fff;
   border-radius: 10px;
@@ -973,7 +973,7 @@ footer ul li {
     font-size: 22px;
     float: left;
     margin-top: 16px;
-    color: #205b8d;
+    color: #ffffff;
     margin-left: 15px;
   }
   .header-wrap2 {
@@ -993,7 +993,7 @@ footer ul li {
     font-size: 22px;
     margin-right: 15px;
   }
-  .main-content.page-m {
+  .main-content .page-m {
     padding: 10% 0 !important;
   }
   .header-mobile .navbar-mobile {
@@ -1013,17 +1013,17 @@ footer ul li {
     position: relative;
     top: 0;
     left: 0;
-    height: 80px;
+    height: 70px;
   }
   a.logo img {
     width: 15 0px;
   }
 
   .cart-area i {
-    font-size: 22px;
+    font-size: 50px;
     float: left;
     margin-top: 16px;
-    color: #205b8d;
+    color: #000;
     margin-left: 15px;
   }
   .footer-pagination {
@@ -1042,15 +1042,16 @@ footer ul li {
     right: 10px;
     min-width: 85px;
     color: #fff;
-    border: 1px solid #205b8d;
+    border: 1px solid #9c7945;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
-    border-radius: 0;
-    background: #205b8d;
+    border-radius: 15px;
+    background: #9c7945;
   }
   input.au-input.au-input-xl {
-    border-radius: 0 !important;
-    margin-right: 0;
+    border-radius: 20px !important;
+    /* margin-right: 3em; */
+    margin-left: -6em;
   }
   .cart-area.d-b {
     display: block;
@@ -1059,10 +1060,10 @@ footer ul li {
     display: none;
   }
   .cart-area i {
-    font-size: 18px;
+    font-size: 50px;
     float: left;
     margin-top: 16px;
-    color: #03a9f4;
+    color: #000;
     margin-left: 15px;
   }
   .total span {
@@ -1090,9 +1091,4 @@ footer ul li {
     border: 0;
     padding: 8px 0;
   }
-}
-
-.active-link {
-  font-weight: bold;
-  color: #9c7945;
 }
