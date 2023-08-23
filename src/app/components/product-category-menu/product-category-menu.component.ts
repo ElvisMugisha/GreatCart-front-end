@@ -15,8 +15,9 @@ export class ProductCategoryMenuComponent {
   ngOnInit() {
     this.listProductCategories();
   }
+
   listProductCategories() {
-    this.productService.getProducCategories().subscribe((data) => {
+    this.productService.getProductCategories().subscribe((data) => {
       console.log('Product Categories = ' + JSON.stringify(data));
       this.productCategories = data;
     });

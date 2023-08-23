@@ -1,0 +1,29 @@
+<div class="detail-section">
+  <div class="container-fluid">
+    <div class="card-detail">
+      <div class="card-img">
+        <img
+          src="{{ product.imageUrl }}"
+          class="detail-img"
+          alt="{{ product.name }}"
+        />
+      </div>
+      <div class="card-content">
+        <h2>{{ product.name }}</h2>
+        <div class="price">
+          {{ product.unitPrice | currency : "USD" }}
+        </div>
+        <button (click)="addToCart()" class="primary-btn"> Add to cart</button>
+        <hr />
+        <h4>Description</h4>
+        <br />
+        <p>{{ product.description }}</p>
+
+        <br />
+        <a routerLink="/products" class="mt-5 product-list">
+          Back to products
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

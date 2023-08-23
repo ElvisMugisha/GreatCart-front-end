@@ -21,14 +21,11 @@
       <div class="section-content section-content-p30">
         <div class="container-fluid">
           <div class="header-wrap">
+
             <app-search></app-search>
 
-            <div class="cart-area d-n">
-              <a href="#">
-                <div class="total">19.22 <span> 2</span></div>
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-              </a>
-            </div>
+            <app-cart-status></app-cart-status>
+
           </div>
           <div class="account-wrap"></div>
         </div>
@@ -37,17 +34,31 @@
     <!-- END HEADER DESKTOP-->
 
     <!-- MAIN CONTENT-->
+
     <router-outlet></router-outlet>
-    <!-- <app-product-list> </app-product-list> -->
+
     <!-- END MAIN CONTENT-->
+
+    <footer>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+      <div class="text-center">
+        <p>
+          <span style="color: #949494; font-weight: bold">
+            &copy;Copyright 2023, GreatCart.All rights reserved</span
+          >
+        </p>
+        <p>
+          <span style="color: #949494; font-weight: bold">
+            Designed & Developed: By
+            <a href="">ElvisMugisha</a>
+          </span>
+        </p>
+      </div>
+    </footer>
   </div>
 </div>
 <!-- END PAGE CONTAINER-->
-
-<footer>
-  <ul>
-    <li><a href="#">About Us</a></li>
-    <li><a href="#">Contact Us</a></li>
-    <li><a href="#">Help</a></li>
-  </ul>
-</footer>

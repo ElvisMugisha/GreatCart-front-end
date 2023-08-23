@@ -1,3 +1,97 @@
-<p *ngFor="let tempProduct of products">
-  {{ tempProduct.name }}: {{ tempProduct.unitPrice | currency : "USD" }}
-</p>
+<div class="main-content">
+  <div class="section-content section-content-p30">
+    <div class="container-fluid">
+      <div class="row">
+        <div *ngFor="let tempProduct of products" class="col-md-3">
+          <!-- <div class="product-box"> -->
+          <div class="product-box">
+            <a routerLink="/products/{{ tempProduct.id }}">
+              <img
+                src="{{ tempProduct.imageUrl }}"
+                class="img-responsive text-center"
+              />
+            </a>
+            <div class="card-body">
+              <a routerLink="/products/{{ tempProduct.id }}">
+                <h1>{{ tempProduct.name }}</h1>
+              </a>
+              <p class="card-text">
+                Some example text some example text. John Doe is an architect
+                and engineer
+              </p>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="price">
+                    {{ tempProduct.unitPrice | currency : "USD" }}
+                  </div>
+                </div>
+                <!-- loop over the collection of products -->
+                <div class="col-md-6">
+                  <button (click)="addToCart(tempProduct)" class="primary-btn">
+                    Add to cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- if products is empty then show this message -->
+        <div
+          *ngIf="products?.length == 0"
+          class="alert alert-warning col-md-12"
+          role="alert"
+        >
+          No products found.
+        </div>
+      </div>
+
+      <!-- begin footer -->
+      <div class="footer-pagination">
+        <div class="row">
+          <div class="col-md-6"></div>
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-9" style="padding-left: 18%">
+                <ngb-pagination
+                  [(page)]="thePageNumber"
+                  [pageSize]="thePageSize"
+                  [collectionSize]="theTotalElements"
+                  [maxSize]="4"
+                  [boundaryLinks]="true"
+                  (pageChange)="listProducts()"
+                >
+                </ngb-pagination>
+              </div>
+
+              <div class="col-md-3 mt-2" style="text-align: right">
+                <span class="mr-2" style="color: #9c7945; font-weight: bold"
+                  >Page size</span
+                >
+
+                <select
+                  #myPageSelect
+                  (change)="updatePageSize(myPageSelect.value)"
+                  style="
+                    padding-left: 0.1em;
+                    margin-left: 0.5em;
+                    border-color: #9c7945;
+                    color: #9c7945;
+                  "
+                >
+                  <option value="2">2</option>
+                  <option value="4">4</option>
+                  <option value="8" selected="true">8</option>
+                  <option value="12">12</option>
+                  <option value="16">16</option>
+                  <option value="50">50</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end footer -->
+    </div>
+  </div>
+</div>
