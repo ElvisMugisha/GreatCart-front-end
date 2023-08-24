@@ -574,14 +574,17 @@ hr.category {
   padding: 10% 15% !important;
 }
 
-/* 
+/*
  * ----------------------------
  * Products List
  * ----------------------------
  */
 
 .product-box img {
-  width: 60%;
+  /* width: 60%; */
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%) */
 }
 
 .items select {
